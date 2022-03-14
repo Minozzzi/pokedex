@@ -12,6 +12,7 @@ export class RemotePokemon {
     const httpResponse = await this.httpGetClient.get(this.url)
 
     if (httpResponse.statusCode === HttpStatusCode.ok) {
+      return
     }
 
     throw new UnexpectedError()

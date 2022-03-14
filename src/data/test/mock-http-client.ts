@@ -7,7 +7,7 @@ import {
 export class HttpGetClientSpy implements HttpGetClient {
   url?: string
   response: HttpResponse = {
-    statusCode: HttpStatusCode.success
+    statusCode: HttpStatusCode.ok
   }
 
   async get(url: string): Promise<HttpResponse> {
