@@ -1,5 +1,6 @@
-import { IPokemonProps } from '@/domain/models/pokemon-model'
+import { IPokemonProps, IPokemonsProps } from '@/domain/models/pokemon-model'
 
 export interface IPokemon {
-  findAll(): Promise<IPokemonProps[]>
+  findAll(): Promise<IPokemonsProps[]>
+  findById(): Promise<IPokemonProps>
 }
