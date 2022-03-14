@@ -11,7 +11,8 @@ module.exports = {
     '[/\\\\]node_modules[/\\\\].+\\.(js|jsx|mjs|cjs|ts|tsx)$'
   ],
   moduleNameMapper: {
-    '\\.(css|less)$': 'identity-obj-proxy'
+    '\\.(css|less)$': 'identity-obj-proxy',
+    '@/(.*)$': '<rootDir>/src/$1'
   },
   collectCoverageFrom: ['src/**/*.ts', 'src/**/*.tsx'],
   modulePathIgnorePatterns: ['<rootDir>/node_modules'],

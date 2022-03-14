@@ -1,4 +1,4 @@
-import { HttpGetClient } from '../protocols/http/http-get-client'
+import { HttpGetClient } from '@/data/protocols/http/http-get-client'
 
 export class HttpGetClientSpy implements HttpGetClient {
   url?: string

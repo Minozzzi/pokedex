@@ -1,5 +1,5 @@
-import { HttpGetClientSpy } from '../../test/mock-http-client'
 import { RemotePokemon } from './remote-pokemon'
+import { HttpGetClientSpy } from '@/data/test/mock-http-client'
 
 type SutTypes = {
   sut: RemotePokemon
