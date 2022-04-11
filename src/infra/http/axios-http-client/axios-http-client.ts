@@ -2,6 +2,6 @@ import axios from 'axios'
 
 export class AxiosHttpClient {
   async get(url: string): Promise<void> {
-    await axios(url)
+    await axios.get(url)
   }
 }
