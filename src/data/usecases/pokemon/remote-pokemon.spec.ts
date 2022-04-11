@@ -1,14 +1,15 @@
+import faker from 'faker'
+
 import { RemotePokemon } from './remote-pokemon'
 import { HttpStatusCode } from '@/data/protocols/http/http-response'
 import { HttpGetClientSpy } from '@/data/test/mock-http-client'
 import { UnexpectedError } from '@/domain/errors/unexpected-error'
-
 type SutTypes = {
   sut: RemotePokemon
   httpGetClientSpy: HttpGetClientSpy
 }
 
-const makeSut = (url = 'any_url'): SutTypes => {
+const makeSut = (url = faker.internet.url()): SutTypes => {
   const httpGetClientSpy = new HttpGetClientSpy()
   const sut = new RemotePokemon(url, httpGetClientSpy)
 
@@ -20,7 +21,7 @@ const makeSut = (url = 'any_url'): SutTypes => {
 
 describe('RemotePokemon', () => {
   it('should call HttpGetClient with correct URL', async () => {
-    const url = 'other_url'
+    const url = faker.internet.url()
     const { sut, httpGetClientSpy } = makeSut(url)
     await sut.findAll()
     expect(httpGetClientSpy.url).toBe(url)
