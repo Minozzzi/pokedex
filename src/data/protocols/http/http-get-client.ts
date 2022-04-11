@@ -1,5 +1,5 @@
 import { HttpResponse } from './http-response'
 
-export interface HttpGetClient {
-  get(url: string): Promise<HttpResponse>
+export interface HttpGetClient<T> {
+  get(url: string): Promise<HttpResponse<T>>
 }
