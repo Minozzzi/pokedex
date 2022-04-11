@@ -5,7 +5,7 @@ import { UnexpectedError } from '@/domain/errors/unexpected-error'
 export class RemotePokemon {
   constructor(
     private readonly url: string,
-    private readonly httpGetClient: HttpGetClient
+    private readonly httpGetClient: HttpGetClient<unknown>
   ) {}
 
   async findAll(): Promise<void> {
