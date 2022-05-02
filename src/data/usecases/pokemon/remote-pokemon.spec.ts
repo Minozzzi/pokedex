@@ -1,4 +1,4 @@
-import faker from 'faker'
+import { faker } from '@faker-js/faker'
 
 import { RemotePokemon } from './remote-pokemon'
 import { HttpStatusCode } from '@/data/protocols/http/http-response'
