@@ -8,7 +8,7 @@ export const mockAxios = (): jest.Mocked<typeof axios> => {
       email: faker.internet.email(),
       password: faker.internet.password()
     },
-    status: faker.random.numeric()
+    status: faker.random.numeric() // ToDo: change to faker.internet.httpStatusCode()
   })
 
   return mockedAxios
