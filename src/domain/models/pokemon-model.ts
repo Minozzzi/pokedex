@@ -20,7 +20,7 @@ type Stats = {
   }
 }[]
 
-export type IPokemonsProps = {
+export type ListPokemons = {
   count: number
   next: string | null
   previous: string | null
@@ -30,7 +30,7 @@ export type IPokemonsProps = {
   }
 }
 
-export type IPokemonProps = {
+export type PokemonDetails = {
   height: number
   weight: number
   abilities: Abilities
