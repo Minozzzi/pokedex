@@ -2,7 +2,7 @@ import { faker } from '@faker-js/faker'
 
 import { RemotePokemon } from './remote-pokemon'
 import { HttpStatusCode } from '@/data/protocols/http/http-response'
-import { HttpGetClientSpy } from '@/data/test/mock-http-client'
+import { HttpGetClientSpy } from '@/data/test/mock-http-get-client'
 import { UnexpectedError } from '@/domain/errors/unexpected-error'
 type SutTypes = {
   sut: RemotePokemon
